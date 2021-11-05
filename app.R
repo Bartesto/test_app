@@ -15,7 +15,7 @@ server <- function(input, output) {
       paste("data-", Sys.Date(), ".csv", sep="")
     },
     content = function(file) {
-      write.csv(data, file)
+      write.csv(data, file, row.names = FALSE)
     }
   )
 }

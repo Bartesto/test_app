@@ -20,6 +20,8 @@ server <- function(input, output) {
     mtcarsDF %>% filter(car %in% input$sid)
   })
 
+
+
   output$downloadData <- downloadHandler(
     filename = function() {
       paste("data-", Sys.Date(), ".csv", sep="")
